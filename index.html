@@ -1,1 +1,212 @@
-BrandKit Test
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ReChat BrandKit</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #0f1117;
+            color: #ffffff;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            overflow-x: hidden;
+        }
+
+        /* Background Video Styling */
+        .bg-video {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+            filter: brightness(0.3) blur(4px);
+        }
+
+        header {
+            padding: 2rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(15, 17, 23, 0.7);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+            color: #4f46e5;
+        }
+
+        .logo span {
+            color: #ffffff;
+        }
+
+        main {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 4rem 1rem;
+            text-align: center;
+        }
+
+        .hero-container {
+            max-width: 800px;
+            background: rgba(23, 25, 35, 0.85);
+            backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 16px;
+            padding: 3rem 2rem;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, #ffffff 0%, #a5b4fc 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        p.description {
+            color: #9ca3af;
+            font-size: 1.1rem;
+            margin-bottom: 2.5rem;
+            line-height: 1.6;
+        }
+
+        .asset-card {
+            background: rgba(30, 34, 48, 0.9);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 12px;
+            padding: 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .asset-info {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            text-align: left;
+        }
+
+        .asset-icon {
+            background: #4f46e5;
+            padding: 0.75rem;
+            border-radius: 8px;
+            font-size: 1.25rem;
+        }
+
+        .asset-name {
+            font-weight: 600;
+            font-size: 1.1rem;
+            color: #f3f4f6;
+        }
+
+        .asset-meta {
+            font-size: 0.85rem;
+            color: #9ca3af;
+        }
+
+        .download-btn {
+            background-color: #4f46e5;
+            color: #ffffff;
+            padding: 0.75rem 1.5rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background-color 0.2s, transform 0.1s;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .download-btn:hover {
+            background-color: #4338ca;
+            transform: translateY(-2px);
+        }
+
+        footer {
+            padding: 1.5rem;
+            text-align: center;
+            background: rgba(15, 17, 23, 0.8);
+            backdrop-filter: blur(10px);
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            color: #9ca3af;
+            font-size: 0.9rem;
+        }
+
+        footer span {
+            color: #ffffff;
+            font-weight: 500;
+        }
+
+        @media (max-width: 600px) {
+            .asset-card {
+                flex-direction: column;
+                align-items: stretch;
+            }
+            .download-btn {
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Background Video matching the requested file asset -->
+    <video class="bg-video" autoplay muted loop playsinline>
+        <source src="cdn/assets/rechatbg.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <header>
+        <div class="logo">Re<span>Chat</span></div>
+    </header>
+
+    <main>
+        <div class="hero-container">
+            <h1>BrandKit Assets</h1>
+            <p class="description">Welcome to the official ReChat brand asset repository. Access and download verified visual elements for your projects.</p>
+
+            <div class="asset-card">
+                <div class="asset-info">
+                    <div class="asset-icon">🎥</div>
+                    <div>
+                        <div class="asset-name">rechatbg.mp4</div>
+                        <div class="asset-meta">Video Background Asset</div>
+                    </div>
+                </div>
+                <a href="cdn/assets/rechatbg.mp4" class="download-btn" download>
+                    Download Asset
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>ReChat BrandKit &bull; Asset credit and creation by <span>stungspore</span></p>
+    </footer>
+
+</body>
+</html>
